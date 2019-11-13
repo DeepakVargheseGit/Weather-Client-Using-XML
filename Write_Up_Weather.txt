@@ -1,0 +1,70 @@
+***************************************************************************************************
+Author  - Deepak Varghese
+File    - Write_Up_Weather.txt
+***************************************************************************************************
+
+
+Project Objective
+=============
+To implement a client application that will connect to the National Weather Service web site using HTTP and XML and/or SOAP and display current weather conditions. The client process will connect to the server over a socket connection and request weather information for a certain location. The National Weather Service specifies the location using latitude and longitude.
+
+Modules
+=======
+The module description is as follows :
+
+1. The Client module: A GUI is created using JFrame and swing components. The GUI consist of two text fields for taking the Latitude and the Longitude for the location for which the weather conditions needs to be found. A Button to send the coordinates to the National Weather Service website and it retrieves the XML data and it displays it in the Weather report area field in the Client GUI.
+
+The project has 1 class and is described as follows - 
+
+1.Client.java - The Client class takes the latitude and longitude coordinates and connects to the National Weather Service web site and it retrieves the weather report in XML format for those coordinates and it displays the results.
+
+Execution
+========
+IDE used: Eclipse Version: Oxygen Release (4.7.0)
+1. The below mentioned dependencies should be added to the build path of the project for proper compilation of ReadFromFile.java.
+2. Run Client.java as “Java Application” (Right click on files -Run As - Java Application).
+3. In Client Process UI, Enter the latitude and longitude and click on “Get Weather” button.
+4. The weather report is displayed in the client GUI Weather report area.
+
+TestData
+=======
+The implemented system handles does the following - 
+
+1. The user inputs the latitude and longitude of the location for which the weather report is desired.
+2. These inputs are fed into the National Weather Service website using the https Url connection that is setup.
+3. The weather report for the location is retrieved in XML format and is displayed in the Weather Report area of the Client GUI.
+4. The Weather Report shows the results for the following parameters - 
+   
+   Maximum Temperature
+   Minimum Temperature
+   Dew point Temperature
+   12 Hour Probability of Precipitation
+   Wind Speed 
+   Wind Direction
+   Wave Height
+   
+Assumptions
+===========
+*Execution is done in the common directory.
+*The file system is present within the same directory.
+
+Limitations
+========
+*Exceptions will be thrown if wrong latitude and longitude coordinates are entered .
+
+References
+=========
+
+HTTPS URL Connection 
+
+1)https://alvinalexander.com/blog/post/java/simple-https-example
+2)https://www.mkyong.com/java/java-https-client-httpsurlconnection-example/
+ 
+XML Parsing 
+
+1)https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/
+2)http://theoryapp.com/parse-xml-using-dom-in-java/
+3)https://www.java-forums.org/xml/22674-get-xml-data-url.html
+ 
+URL - https://graphical.weather.gov/xml/rest.php
+
